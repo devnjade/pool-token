@@ -18,6 +18,6 @@ contract PoolToken is ERC20, Ownable {
   }
 
   function burn(uint _amount) external onlyOwner{
-    _burn(owner, _amount);
+    _burn(msg.sender, _amount);
   }
 }
