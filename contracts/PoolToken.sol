@@ -9,7 +9,7 @@ contract PoolToken is ERC20, Ownable {
   uint constant initialSupply = 10000000 * (10**18);
   bool public enableMinting;
 
-  constructor ERC20('Pool', 'POLX') public {
+  constructor() ERC20('Pool', 'POLX') {
     _mint(msg.sender, initialSupply);
   }
 
@@ -18,6 +18,6 @@ contract PoolToken is ERC20, Ownable {
   }
 
   function burn(uint _amount) external onlyOwner{
-    _burn(_amount)
+    _burn(_amount);
   }
 }

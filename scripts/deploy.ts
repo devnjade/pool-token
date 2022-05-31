@@ -1,12 +1,12 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const Greeter = await ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
+  const PoolToken = await ethers.getContractFactory("PoolToken");
+  const poolToken = await PoolToken.deploy();
 
-  await greeter.deployed();
+  await poolToken.deployed();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("PoolToken deployed to:", poolToken.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

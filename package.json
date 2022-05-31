@@ -1,7 +1,8 @@
 {
   "name": "hardhat-project",
   "scripts": {
-    "push": "git add . && git commit -m 'update' && git push"
+    "push": "git add . && git commit -m 'update' && git push",
+    "deploy": "yarn hardhat clean && yarn hardhat compile && yarn hardhat run scripts/deploy.ts --network ropsten"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
@@ -34,5 +35,8 @@
     "ts-node": "^10.8.0",
     "typechain": "^5.2.0",
     "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0"
   }
 }
